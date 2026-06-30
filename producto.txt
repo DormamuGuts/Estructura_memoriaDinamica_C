@@ -1,0 +1,20 @@
+1,Compuerta AND 74LS08,42,0.30,0.80
+2,Compuerta NAND 74LS00,50,0.30,0.80
+3,Flip-Flop JK 74LS76,40,0.60,1.50
+4,Transistor MOSFET IRF640N,30,1.20,2.50
+5,Protoboard 830 Puntos,20,3.50,6.00
+6,Fuente de Poder Simetrica,8,15.00,25.00
+7,Microcontrolador ESP32,25,6.00,12.00
+8,Sensor de Temperatura DHT11,35,1.50,3.50
+9,Multimetro Digital,15,8.00,15.00
+10,Decodificador BCD a 7 Seg 74LS47,45,0.70,1.80
+11,Display 7 Segmentos Anodo Comun,60,0.40,1.00
+12,Potenciometro 10k Lineal,100,0.20,0.75
+13,Cable Jumper Macho-Macho x40,50,1.50,3.00
+14,Resistencia 330 Ohm 1/4W (Paquete),200,0.50,1.50
+15,Diodo LED Rojo 5mm (x10),150,0.30,1.00
+16,Circuito Integrado Timer 555,80,0.25,0.90
+17,Modulo Rele 1 Canal 5V,40,1.20,2.50
+18,Condensador Electrolitico 1000uF,100,0.15,0.50
+19,Placa de Cobre Fenolica 10x10,30,1.00,2.50
+20,Cautin de Lapiz 40W,15,4.50,9.00

@@ -1,0 +1,5 @@
+1,1,Compuerta AND 74LS08,2,0.30,0.80,2026-06-29
+1,6,Fuente de Poder Simetrica,2,15.00,25.00,2026-06-29
+1,1,Compuerta AND 74LS08,2,0.30,0.80,2026-06-29
+1,1,Compuerta AND 74LS08,1,0.30,0.80,2026-06-29
+1,1,Compuerta AND 74LS08,3,0.30,0.80,2026-06-29

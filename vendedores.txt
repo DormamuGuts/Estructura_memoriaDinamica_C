@@ -1,0 +1,20 @@
+admin,1234,Administrador Principal
+jromero,admin2026,Jesse Romero
+cmendoza,ventas01,Carlos Mendoza
+mlopez,ventas02,Maria Fernanda Lopez
+dfreire,caja01,David Freire
+aalvarado,caja02,Ana Alvarado
+ecastro,seguro99,Eduardo Castro
+smorales,vend08,Silvia Morales
+rtorres,rt2026,Roberto Torres
+pzambrano,pz1234,Paola Zambrano
+lmacias,lmacias1,Luis Macias
+gpazmino,gpaz2,Gabriela Pazmino
+cvargas,cvargas3,Cristian Vargas
+jvera,jvera4,Jorge Vera
+mcevallos,mc555,Mireya Cevallos
+agarcia,agarcia6,Andres Garcia
+dsalazar,dsal7,Daniela Salazar
+fgomez,fgomez8,Fernando Gomez
+kruiz,kruiz9,Karla Ruiz
+soporte,soporte00,Soporte Tecnico
