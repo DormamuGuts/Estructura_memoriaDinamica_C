@@ -3,21 +3,28 @@
 #include <string.h>
 #include <time.h>
 #include "productos.h"
+#define MAX_REGISTROS 1000 // maximo de productos
 
 Producto* cargarProductos(int *total) {
     FILE *archivo = fopen("producto.txt", "r");
     if (!archivo) return NULL;
 
-    Producto *lista = NULL;
-    *total = 0;
-    Producto temp;
+    Producto *lista = (Producto*)calloc(MAX_REGISTROS, sizeof(Producto));
+    if (!lista) {
+        fclose(archivo);
+        return NULL;
+    }
 
-    while (fscanf(archivo, "%d,%49[^,],%d,%f,%f\n", &temp.codigo, temp.nombre, 
-                  &temp.cantidad_disponible, &temp.costo, &temp.precio_venta) == 5) {
-        Producto *tempPtr = realloc(lista, (*total + 1) * sizeof(Producto));
-        if (!tempPtr) { free(lista); fclose(archivo); return NULL; }
-        lista = tempPtr;
-        lista[*total] = temp;
+    *total = 0;
+
+    while (*total < MAX_REGISTROS && 
+           fscanf(archivo, "%d,%49[^,],%d,%f,%f\n", 
+           &lista[*total].codigo, 
+           lista[*total].nombre, 
+           &lista[*total].cantidad_disponible, 
+           &lista[*total].costo, 
+           &lista[*total].precio_venta) == 5) {
+        
         (*total)++;
     }
     fclose(archivo);

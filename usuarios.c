@@ -2,20 +2,25 @@
 #include <stdlib.h>
 #include <string.h>
 #include "usuarios.h"
+#define MAX_VENDEDORES 100 // limite de 100
 
 Vendedor* cargarVendedores(int *total) {
     FILE *archivo = fopen("vendedores.txt", "r");
     if (!archivo) return NULL;
 
-    Vendedor *lista = NULL;
-    *total = 0;
-    Vendedor temp;
+    Vendedor *lista = (Vendedor*)calloc(MAX_VENDEDORES, sizeof(Vendedor));
+    if (!lista) {
+        fclose(archivo);
+        return NULL;
+    }
 
-    while (fscanf(archivo, "%29[^,],%29[^,],%49[^\n]\n", temp.usuario, temp.clave, temp.nombre) == 3) {
-        Vendedor *tempPtr = realloc(lista, (*total + 1) * sizeof(Vendedor));
-        if (!tempPtr) { free(lista); fclose(archivo); return NULL; }
-        lista = tempPtr;
-        lista[*total] = temp;
+    *total = 0;
+    while (*total < MAX_VENDEDORES && 
+           fscanf(archivo, "%29[^,],%29[^,],%49[^\n]\n", 
+           lista[*total].usuario, 
+           lista[*total].clave, 
+           lista[*total].nombre) == 3) {
+        
         (*total)++;
     }
     fclose(archivo);
